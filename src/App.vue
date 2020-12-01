@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-    <div class="alert alert-primary" role="alert">
-     A simple primary alert—check it out!
-  </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -16,16 +12,9 @@ export default {
   components: {
     HelloWorld
   },
-  // created(){
-  //   const api=`${process.env.AIRPATH}/api/${process.env.CUSTOMPATH}/products`;
-  //   this.$http.get(api).then((response) => {
-  //   console.log(response.data)
-  //   })
-
-  
 }
 </script>
 
 <style lang="scss">
- @import "~bootstrap/scss/bootstrap";
+ @import "./assets/all";
 </style>
