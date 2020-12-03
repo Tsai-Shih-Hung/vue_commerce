@@ -4,7 +4,9 @@ import Helloworld from'@/components/HelloWorld'
 import login from'@/components/pages/Login'
 import dashboard from'@/components/dashboard'
 import products from'@/components/pages/products'
-import practice from '@/components/pages/practice'
+import order from'@/components/pages/order'
+import coupon from'@/components/pages/coupon'
+
 
 Vue.use( VueRouter)
 
@@ -37,11 +39,15 @@ export default new  VueRouter({
                 component:products,
             },
             {
-                path:'/practice',
-                name:'practice',
-                component:practice,
+                path:'/order',
+                name:'order',
+                component:order,
+            },
+            {
+                path:'/coupon',
+                name:'coupon',
+                component:coupon,
             }
-
         ]
           
         },

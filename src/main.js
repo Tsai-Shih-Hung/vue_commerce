@@ -3,6 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'bootstrap'
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
+
+import currencyFilter from './filters/currency';
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -10,6 +15,8 @@ import VueAxios from 'vue-axios'
 Vue.config.productionTip = false;
 axios.defaults.withCredentials=true;
 Vue.use(VueAxios, axios)
+Vue.component('Loading',Loading);
+Vue.filter('currency',currencyFilter);
 
 /* eslint-disable no-new */
 new Vue({
